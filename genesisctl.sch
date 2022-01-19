@@ -276,14 +276,12 @@ Text Label 3450 4200 0    50   ~ 0
 gnd_left
 Wire Wire Line
 	4350 4300 3500 4300
-Wire Wire Line
-	3500 4300 3500 5000
 Text Label 3550 4300 0    50   ~ 0
 gnd_right
 Wire Wire Line
 	4850 4300 5900 4300
 Wire Wire Line
-	5900 4300 5900 5300
+	5900 4300 5900 5100
 Text Label 5250 4100 0    50   ~ 0
 select
 Text Label 5250 4200 0    50   ~ 0
@@ -301,10 +299,6 @@ Text GLabel 7850 4650 3    50   Input ~ 0
 btnb_out
 NoConn ~ 2950 5300
 NoConn ~ 1950 5300
-Text Label 7550 4800 1    50   ~ 0
-left_out
-Text Label 7650 4800 1    50   ~ 0
-right_out
 Text Label 8050 5100 1    50   ~ 0
 start_out
 Text GLabel 1950 5600 0    50   Output ~ 0
@@ -413,7 +407,7 @@ Wire Wire Line
 NoConn ~ 2950 5000
 NoConn ~ 1950 5000
 Wire Wire Line
-	7750 4650 7750 5200
+	7750 4650 7750 5000
 Wire Wire Line
 	7450 4350 7450 4650
 NoConn ~ 2950 5100
@@ -429,21 +423,9 @@ Wire Wire Line
 Wire Wire Line
 	3300 4650 7450 4650
 Wire Wire Line
-	6350 5200 6000 5200
-Wire Wire Line
-	7350 5200 7750 5200
-Wire Wire Line
-	6000 4000 6000 5200
-Connection ~ 6000 5200
+	6000 4000 6000 5000
 NoConn ~ 6350 5700
 NoConn ~ 7350 5700
-Wire Wire Line
-	7350 5300 8050 5300
-Wire Wire Line
-	8050 5300 8050 4650
-Wire Wire Line
-	6350 5300 5900 5300
-Connection ~ 5900 5300
 NoConn ~ 6350 5500
 NoConn ~ 7350 5500
 Wire Wire Line
@@ -464,29 +446,43 @@ Wire Wire Line
 Wire Wire Line
 	5600 1350 5600 2050
 Wire Wire Line
-	6000 5200 6000 5700
-Wire Wire Line
 	6000 5700 2950 5700
-NoConn ~ 2950 5400
-NoConn ~ 1950 5400
 Wire Wire Line
 	5900 5600 2950 5600
 Wire Wire Line
-	5900 5300 5900 5600
-NoConn ~ 2950 5500
-NoConn ~ 1950 5500
+	3400 5400 2950 5400
 Wire Wire Line
-	3500 5000 6350 5000
+	3500 5500 2950 5500
 Wire Wire Line
-	3400 5100 6350 5100
+	3400 4200 3400 5400
 Wire Wire Line
-	3400 4200 3400 5100
+	3500 4300 3500 5500
+Text GLabel 1950 5400 0    50   Output ~ 0
+left_out
+Text GLabel 7550 4350 3    50   Input ~ 0
+left_out
+Text GLabel 1950 5500 0    50   Output ~ 0
+right_out
+Text GLabel 7650 4350 3    50   Input ~ 0
+right_out
 Wire Wire Line
-	7550 5100 7350 5100
+	6000 5000 6350 5000
+Connection ~ 6000 5000
 Wire Wire Line
-	7550 4350 7550 5100
+	7350 5000 7750 5000
 Wire Wire Line
-	7350 5000 7650 5000
+	6000 5000 6000 5700
+NoConn ~ 6350 5200
+NoConn ~ 7350 5200
 Wire Wire Line
-	7650 5000 7650 4350
+	5900 5100 6350 5100
+Connection ~ 5900 5100
+Wire Wire Line
+	7350 5100 8050 5100
+Wire Wire Line
+	8050 5100 8050 4650
+Wire Wire Line
+	5900 5100 5900 5600
+NoConn ~ 7350 5300
+NoConn ~ 6350 5300
 $EndSCHEMATC
