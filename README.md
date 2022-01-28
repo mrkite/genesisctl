@@ -2,7 +2,9 @@
 
 This is my circuit design to allow a genesis controller to be used in a JAMMA system without any hardware modifications to the controller.
 
-The genesis controller interfaces over a DB9 connector.  There aren't enough pins to map all the buttons to pins, so it muxes two sets of buttons to the same pins.  A select pin changes which buttons are returned depending on if it's tied to +5 or ground.
+![Schematic](schematic.png)
+
+The genesis controller interfaces over a DB9 connector.  There aren't enough pins to map all the buttons to pins, so it muxes two sets of buttons to the same pins.  A select pin changes which button states are returned depending on if it's tied to +5 or ground.
 
 So this simple circuit toggles the select pin back and forth and latches each pin to a unique output.
 
@@ -16,5 +18,7 @@ There are two `74ls374` latches.  One uses the straight clock, the other uses th
 
 One of the clocks is also sent to the select pin.  Due to propagation delay, the latch fires on the rising edge of the clock before the select pin can be raised high.  Meaning latch using the clock sent to select will be latching the ground-state buttons while the other latch will be latching the active select buttons.
 
-## Notes
-I haven't bothered to route anything on the circuit layout since I only needed a single board for my project. I just used a protoboard and called it done.
+The board uses a simple 10-pin header which will allow you to easily crimp a
+`DB9` jack to one end of a ribbon cable with a `2x5 IDC` socket on the other.
+
+![Final board](board.png)
